@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: hsl(160, 79%, 43%);
+    background-color: #FFAEBC;
     border-radius: 10px;
     margin: 5px 0px;
 }

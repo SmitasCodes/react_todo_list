@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import TodoHeader from "./TodoHeader";
 import TodoSearch from "./TodoSearch";
 import TodoAdd from "./TodoAdd";
@@ -22,18 +22,23 @@ const DUMMY_TASKS = [
 
 const Todo = () => {
   const [todoList, setTodoList] = useState(DUMMY_TASKS);
+  const [searchChar, setSearchChar] = useState('');
 
-  const saveTodoEntryHandler = (entry) => {
+  const saveTodoSearchHandler = (searchEntry) => {
+    setSearchChar(searchEntry);
+  };
+
+  const saveTodoEntryHandler = (todoEntry) => {
     setTodoList((prevTodoList) => {
-      return [entry, ...prevTodoList];
+      return [todoEntry, ...prevTodoList];
     });
   };
 
   return (
     <div className="todo_app">
       <TodoHeader />
-      <TodoSearch />
-      <TodoList items={todoList} />
+      <TodoSearch saveTodoSearch={saveTodoSearchHandler} />
+      <TodoList items={todoList} searchReq={searchChar} />
       <TodoAdd saveTodoEntry={saveTodoEntryHandler} />
     </div>
   );
