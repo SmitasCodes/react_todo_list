@@ -1,0 +1,23 @@
+.task{
+    min-height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(160, 79%, 43%);
+    border-radius: 10px;
+    margin: 5px 0px;
+}
+
+.task__check{
+    width: 15px;
+    height: 15px;
+}
+
+.task__content{
+    display: inline-block;
+    font-size: 20px;
+    margin: 0;
+    height: 100%;
+    word-break: break-word;
+}
