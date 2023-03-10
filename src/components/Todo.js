@@ -8,16 +8,29 @@ import './UI/Todo.css'
 const DUMMY_TASKS = [
   {
     id: "e1",
-    task: "Iskept kebabu"
+    task: "O Lorem Ipsum tem vindo a ser",
+    isCompleted: false
   },
   {
     id: "e2",
-    task: "Nueiti i sokius"
+    task: "para criar um espécime de livro.",
+    isCompleted: false
   },
   {
     id: "e3",
-    task: "Suprogramuoti geriausia puslapi"
+    task: "É um facto estabelecido de que um leitor é distraído pelo",
+    isCompleted: false
   },
+  {
+    id: "e4",
+    task: "Existem muitas variações",
+    isCompleted: false
+  },
+  {
+    id: "e5",
+    task: "para criar um variações espécime de livro .",
+    isCompleted: false
+  }
 ]
 
 const Todo = () => {

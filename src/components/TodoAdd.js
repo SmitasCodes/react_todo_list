@@ -5,14 +5,15 @@ const TodoAdd = (props) => {
   const inputRef = useRef(null);
 
   const addBtnHandler = () => {
-    if(!inputRef.current.value.trim()){
+    if (!inputRef.current.value.trim()) {
       console.log("Task is not entered")
       return;
     }
-    
-    const todoData= {
+
+    const todoData = {
       task: inputRef.current.value,
-      id: Math.random().toString()
+      id: Math.random().toString(),
+      isCompleted: false
     }
 
     props.saveTodoEntry(todoData);
@@ -21,7 +22,7 @@ const TodoAdd = (props) => {
 
   return (
     <div className="todo_search_add">
-      <input type="text" ref={inputRef} className="todo_search_add__input" />
+      <input id="input" type="text" ref={inputRef} className="todo_search_add__input" />
       <button onClick={addBtnHandler} className="todo_search_add__button">
         Add
       </button>

@@ -10,7 +10,7 @@ const TodoList = (props) => {
   return (
     <div className="todo_list">
       {searchResults.map((item) => {
-        return <NewTodoListTask key={item.id} content={item.task} />;
+        return <NewTodoListTask key={item.id} content={item.task} status={item.isCompleted} />;
       })}
     </div>
   );
